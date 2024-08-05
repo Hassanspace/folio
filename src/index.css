@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  cursor: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2024%2024'%3E%3Cpath%20fill='%23FFF'%20stroke='%23000'%20stroke-width='2'%20d='M5.5%203.21V20.8c0%20.45.54.67.85.35l4.86-4.86a.5.5%200%200%201%20.35-.15h6.87a.5.5%200%200%200%20.35-.85L6.35%202.85a.5.5%200%200%200-.85.35Z'%3E%3C/path%3E%3C/svg%3E"),
+    auto;
+}
+
+/* HTML: <div class="loader"></div> */
+.loaderwrap {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100%25'%20height='100%25'%20viewBox='0%200%20800%20800'%3E%3Crect%20fill='%23000000'%20width='800'%20height='800'/%3E%3Cg%20fill-opacity='0.27'%3E%3Ccircle%20fill='%23000000'%20cx='400'%20cy='400'%20r='600'/%3E%3Ccircle%20fill='%23230046'%20cx='400'%20cy='400'%20r='500'/%3E%3Ccircle%20fill='%232f0052'%20cx='400'%20cy='400'%20r='400'/%3E%3Ccircle%20fill='%233b075e'%20cx='400'%20cy='400'%20r='300'/%3E%3Ccircle%20fill='%248156a'%20cx='400'%20cy='400'%20r='200'/%3E%3Ccircle%20fill='%25552277'%20cx='400'%20cy='400'%20r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 220px;
+  height: 44px;
+  border-radius: 40px;
+  color: #514b82;
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  width: 14px;
+  top: 0;
+  bottom: 0;
+  left: -20px;
+  border-radius: inherit;
+  background: currentColor;
+  box-shadow: -10px 0 12px 3px currentColor;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%, -30px 50%);
+  animation: l14 1s infinite linear;
+}
+@keyframes l14 {
+  100% {
+    left: calc(100% + 20px);
+  }
+}
